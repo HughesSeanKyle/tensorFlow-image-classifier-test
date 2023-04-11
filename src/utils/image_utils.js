@@ -2,11 +2,23 @@ const tf = require('@tensorflow/tfjs-node');
 const fs = require('fs');
 const path = require('path');
 
-// Load images helper
+// Helpers
 async function loadImage(filePath) {
 	const buffer = fs.readFileSync(filePath);
 	const pixels = tf.node.decodeImage(buffer);
 	return pixels;
+}
+
+async function loadImagesFromFolder(folderPath) {
+	const fileNames = fs.readdirSync(folderPath);
+	const images = [];
+	for (let i = 0; i < fileNames.length; i++) {
+		const fileName = fileNames[i];
+		const filePath = path.join(folderPath, fileName);
+		const image = await loadImage(filePath);
+		images.push(image);
+	}
+	return images;
 }
 
 function rename_files() {
@@ -37,3 +49,5 @@ function rename_files() {
 		}
 	}
 }
+
+module.exports = { loadImagesFromFolder };
