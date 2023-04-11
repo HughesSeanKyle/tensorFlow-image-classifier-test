@@ -12,4 +12,3 @@
 - 5. Data directory structure excluded from push is as follows:
 
 ![Folder_Structure](/assets/images/Image_classifier_Folder_Structure.png)
-<img src="/assets/images/Image_classifier_Folder_Structure.png" alt="Alt Text">
