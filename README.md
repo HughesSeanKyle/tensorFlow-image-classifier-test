@@ -11,4 +11,4 @@
 - 4. Sample images dataset can be located [`here`](https://www.tensorflow.org/datasets/catalog/cats_vs_dogs)
 - 5. Data directory structure excluded from push is as follows:
 
-![Folder_Structure](/4.image-classifier-test/assets/images/Image_classifier_Folder_Structure.png)
+![Folder_Structure](assets/images/Image_classifier_Folder_Structure.png)
