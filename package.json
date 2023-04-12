@@ -10,6 +10,6 @@
 	"author": "Kyle Sean Hughes",
 	"license": "ISC",
 	"dependencies": {
-		"@tensorflow/tfjs": "^4.4.0"
+		"@tensorflow/tfjs-node": "^3.18.0"
 	}
 }

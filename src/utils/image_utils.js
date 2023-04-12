@@ -3,12 +3,18 @@ const fs = require('fs');
 const path = require('path');
 
 // Helpers
+/*
+    Helps to convert all images to tensors 
+*/
 async function loadImage(filePath) {
-	const buffer = fs.readFileSync(filePath);
-	const pixels = tf.node.decodeImage(buffer);
+	const buffer = await fs.readFileSync(filePath);
+	const pixels = await tf.node.decodeImage(buffer);
 	return pixels;
 }
 
+/*
+    Gets images from given folder path, converts to tensors, and returns as array 
+*/
 async function loadImagesFromFolder(folderPath) {
 	const fileNames = fs.readdirSync(folderPath);
 	const images = [];

@@ -12,3 +12,18 @@
 - 5. Data directory structure excluded from push is as follows:
 
 ![Folder_Structure](/assets/images/Image_classifier_Folder_Structure.png)
+
+## Errors
+
+### Tensorflow error
+
+When using `@tensorflow/tfjs` as opposed to `@tensorflow/tfjs-node` TensorFlow seems to work. However, the Node js implementation seems to produce the folloing error:
+
+node:internal/modules/cjs/loader:1310
+return process.dlopen(module, path.toNamespacedPath(filename));
+
+Error: A dynamic link library (DLL) initialization routine failed.
+
+### TensorFlow solution
+
+Pending...
